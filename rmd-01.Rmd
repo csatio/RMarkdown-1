@@ -21,7 +21,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 #DC
 
-```{r}
+```{r,out.width=200}
 knitr::include_graphics("15-153902_superman-dc-comics-logo-comic-book-the-new.png") 
 ```
 
