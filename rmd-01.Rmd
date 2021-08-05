@@ -27,10 +27,11 @@ When you click the **Knit** button a document will be generated that includes bo
 library(tidyverse)
 library(readxl)
 dc <- read.csv(file = 'dc-wikia-data.csv', stringsAsFactors = TRUE)
-#knitr::kable(marvel_dc)
-top10 <- tbl_df(dc) %>%
-  group_by(APPEARANCES) %>%
-  top_n(10)
+top10 <- dc %>% slice_max(order_by = APPEARANCES, n = 10)
+```
+
+
+```{r , message=FALSE, warning=FALSE}
 knitr::kable(top10)
 ```
 
