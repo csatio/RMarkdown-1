@@ -8,7 +8,9 @@ output:
 
 Ctrl + Alt + i = abre um chunks
 ```{r}
-
+library(vip)
+library(tidymodels)
+library(DBI)
 ```
 
 ```{r setup, include=FALSE}
