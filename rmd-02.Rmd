@@ -19,12 +19,11 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## R Markdown
 
-#DC
+#MARVEL
 
 ```{r}
-knitr::include_graphics("15-153902_superman-dc-comics-logo-comic-book-the-new.png") 
+knitr::include_graphics("marvel-comics_logo-2021-marvelcomics.png")
 ```
-
 
 
 This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
@@ -34,11 +33,11 @@ When you click the **Knit** button a document will be generated that includes bo
 ```{r , message=FALSE, warning=FALSE }
 library(tidyverse)
 library(readxl)
-dc <- read.csv(file = 'dc-wikia-data.csv', stringsAsFactors = TRUE)
-top10 <- dc %>% slice_max(order_by = APPEARANCES, n = 10)
+marvel <- read.csv(file = 'marvel-wikia-data.csv', stringsAsFactors = TRUE)
+top10 <- marvel %>% slice_max(order_by = APPEARANCES, n = 10)
 ```
 
-**DC TOP 10 por aparições**
+**Marvel TOP 10 por aparições**
 
 ```{r , message=FALSE, warning=FALSE}
 knitr::kable(top10)
