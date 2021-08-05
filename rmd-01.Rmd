@@ -24,9 +24,9 @@ When you click the **Knit** button a document will be generated that includes bo
 ```{r , message=FALSE, warning=FALSE}
 library(tidyverse)
 library(readxl)
-marvel_dc <- read.csv(file = 'dc-wikia-data.csv', stringsAsFactors = TRUE)
+dc <- read.csv(file = 'dc-wikia-data.csv', stringsAsFactors = TRUE)
 #knitr::kable(marvel_dc)
-top10 <- tbl_df(marvel_dc) %>%
+top10 <- tbl_df(dc) %>%
   group_by(APPEARANCES) %>%
   top_n(10)
 knitr::kable(top10)
